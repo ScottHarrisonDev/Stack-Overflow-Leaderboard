@@ -5,6 +5,8 @@ Just a quick and fun web app I created to keep tabs on who had the most reputati
 
 Feel free to contribute or host this yourself.
 
+You can find a demo here: http://stack.scottharrisondesign.co.uk
+
 Install
 ==========================
 
