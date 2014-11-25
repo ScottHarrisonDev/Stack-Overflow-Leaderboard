@@ -2,19 +2,19 @@ tskStack = {
 
 	init: function(){
 		var self = this;
-		self.fnGetUserData('709625;1879628;368846;1283391;309956;3387421');
+		self.fnGetUserData('709625;1879628;368846;1283391;309956;3387421', [Your API Key]);
 		self.fnEasterEgg();
 	},
 
-	fnGetUserData: function(userIDs){
+	fnGetUserData: function(userIDs, apiKey){
 		var self = this;
-		self.fnDoAPICall(userIDs);		
+		self.fnDoAPICall(userIDs, apiKey);		
 	},
 
-	fnDoAPICall: function(userIDs){
+	fnDoAPICall: function(userIDs, apiKey){
 		var self = this;
 		$.ajax({
-			url: "https://api.stackexchange.com/2.2/users/" + userIDs + "?key=kPQWcAQVhj3ex1b0XR1Mng((&site=stackoverflow&order=desc&sort=reputation&filter=default",
+			url: "https://api.stackexchange.com/2.2/users/" + userIDs + "?key=" + apiKey + "((&site=stackoverflow&order=desc&sort=reputation&filter=default",
 			success: function(data){
 				self.fnClearBoard();
 				$.each(data.items,function(index,value){
