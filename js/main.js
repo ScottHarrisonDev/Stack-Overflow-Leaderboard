@@ -14,7 +14,7 @@ tskStack = {
 	fnDoAPICall: function(userIDs, apiKey){
 		var self = this;
 		$.ajax({
-			url: "https://api.stackexchange.com/2.2/users/" + userIDs + "?key=" + apiKey + "((&site=stackoverflow&order=desc&sort=reputation&filter=default",
+			url: "https://api.stackexchange.com/2.2/users/" + userIDs + "?key=" + apiKey + "&site=stackoverflow&order=desc&sort=reputation&filter=default",
 			success: function(data){
 				self.fnClearBoard();
 				$.each(data.items,function(index,value){
